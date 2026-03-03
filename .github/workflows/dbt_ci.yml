@@ -23,8 +23,26 @@ jobs:
           python-version: '3.10'
 
       - name: Install dbt
+        run: pip install dbt-snowflake
+
+      - name: Create dbt profiles.yml
         run: |
-          pip install dbt-snowflake
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          modern_retail:
+            target: prod
+            outputs:
+              prod:
+                type: snowflake
+                account: BCQSCMN-MS67180
+                user: PRAVEENPAULLXYZ
+                password: ${SNOWFLAKE_PASSWORD}
+                role: SYSADMIN
+                database: DBT_DB
+                warehouse: DBT_WH
+                schema: DBT_PROD_SCHEMA
+                threads: 4
+          EOF
 
       - name: Run dbt deps
         run: |
