@@ -1,10 +1,10 @@
 name: dbt CI Pipeline
 
 on:
+  pull_request:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   dbt-build:
@@ -53,3 +53,14 @@ jobs:
         run: |
           cd dbt_project/modern_retail
           dbt build --target prod
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: dbt-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Production (Simulated)
+        run: |
+          echo "🚀 Deploying to Production Airflow..."
+          echo "Production deployment successful."
