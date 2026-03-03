@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    columns:
+      - name: product_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_sk
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_sk
+
+  - name: fct_revenue
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: product_sk
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_products')
+                field: product_sk

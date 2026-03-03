@@ -1,0 +1,119 @@
+[0m21:09:54.085256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be29222210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be27974530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be27585310>]}
+
+
+============================== 21:09:54.089117 | 27ca0f2f-21d4-4972-a0a5-cb24502377ea ==============================
+[0m21:09:54.089117 [info ] [MainThread]: Running with dbt=1.11.6
+[0m21:09:54.089617 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_cache_events': 'False', 'profiles_dir': '/home/praveen/.dbt', 'log_format': 'default', 'write_json': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'fail_fast': 'False', 'introspect': 'True', 'static_parser': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'no_print': 'None', 'partial_parse': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'debug': 'False', 'empty': 'None', 'invocation_command': 'dbt init modern_retail', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m21:09:54.104194 [debug] [MainThread]: Starter project path: /home/praveen/dbt_venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m21:09:54.111364 [info ] [MainThread]: 
+Your new dbt project "modern_retail" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:09:54.111836 [info ] [MainThread]: Setting up your profile.
+[0m21:10:54.714915 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m21:10:54.715557 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m21:10:54.715929 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m21:12:45.866312 [info ] [MainThread]: Profile modern_retail written to /home/praveen/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:12:45.868417 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 164.31317, "process_in_blocks": "95320", "process_kernel_time": 0.273527, "process_mem_max_rss": "124480", "process_out_blocks": "88", "process_user_time": 1.421511}
+[0m21:12:45.869212 [debug] [MainThread]: Command `dbt init` succeeded at 21:12:45.869109 after 164.31 seconds
+[0m21:12:45.869578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be2544a780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be257c6030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77be24e2c470>]}
+[0m21:12:45.869969 [debug] [MainThread]: Flushing usage events
+[0m21:12:46.815876 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:22:54.689949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb71e6360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb73fa840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb6a7d130>]}
+
+
+============================== 06:22:54.694011 | e7842feb-d6e1-4228-af99-c583123d3c65 ==============================
+[0m06:22:54.694011 [info ] [MainThread]: Running with dbt=1.11.6
+[0m06:22:54.694463 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'target_path': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'profiles_dir': '/home/praveen/.dbt', 'partial_parse': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'write_json': 'True', 'printer_width': '80', 'no_print': 'None', 'warn_error': 'None'}
+[0m06:22:54.694863 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/praveen/modern_retail_platform/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m06:22:54.695988 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.060315218, "process_in_blocks": "53096", "process_kernel_time": 0.185289, "process_mem_max_rss": "99388", "process_out_blocks": "16", "process_user_time": 1.268832}
+[0m06:22:54.696465 [debug] [MainThread]: Command `dbt docs generate` failed at 06:22:54.696376 after 0.06 seconds
+[0m06:22:54.696772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb747cfe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb74f7c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abcb69e7500>]}
+[0m06:22:54.697072 [debug] [MainThread]: Flushing usage events
+[0m06:22:55.664309 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:06:30.126990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d74f26e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d764332f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d764326c0>]}
+
+
+============================== 10:06:30.130382 | c34339b4-71f0-43e7-b64b-124e776d9bfd ==============================
+[0m10:06:30.130382 [info ] [MainThread]: Running with dbt=1.11.6
+[0m10:06:30.130834 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'version_check': 'True', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'profiles_dir': '/home/praveen/.dbt', 'use_colors': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'printer_width': '80', 'write_json': 'True', 'partial_parse': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug'}
+[0m10:06:30.139288 [info ] [MainThread]: dbt version: 1.11.6
+[0m10:06:30.139687 [info ] [MainThread]: python version: 3.12.3
+[0m10:06:30.140100 [info ] [MainThread]: python path: /home/praveen/dbt_venv/bin/python3
+[0m10:06:30.140514 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m10:06:30.331326 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m10:06:30.331734 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m10:06:30.332018 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m10:06:30.387810 [info ] [MainThread]: Using profiles dir at /home/praveen/.dbt
+[0m10:06:30.388224 [info ] [MainThread]: Using profiles.yml file at /home/praveen/.dbt/profiles.yml
+[0m10:06:30.388635 [info ] [MainThread]: Using dbt_project.yml file at /home/praveen/modern_retail_platform/dbt_project.yml
+[0m10:06:30.389164 [info ] [MainThread]: adapter type: snowflake
+[0m10:06:30.389514 [info ] [MainThread]: adapter version: 1.11.2
+[0m10:06:30.389882 [info ] [MainThread]: Configuration:
+[0m10:06:30.390307 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:06:30.390696 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m10:06:30.391042 [info ] [MainThread]: Required dependencies:
+[0m10:06:30.391369 [debug] [MainThread]: Executing "git --help"
+[0m10:06:30.393301 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:06:30.393757 [debug] [MainThread]: STDERR: "b''"
+[0m10:06:30.394033 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:06:30.394390 [info ] [MainThread]: Connection:
+[0m10:06:30.394718 [info ] [MainThread]:   account: BCQSCMN-MS67180
+[0m10:06:30.395011 [info ] [MainThread]:   user: PRAVEENPAULXYZ
+[0m10:06:30.395284 [info ] [MainThread]:   database: DBT_DB
+[0m10:06:30.395553 [info ] [MainThread]:   warehouse: DBT_WH
+[0m10:06:30.395819 [info ] [MainThread]:   role: SYSADMIN
+[0m10:06:30.396085 [info ] [MainThread]:   schema: DBT_DEV_SCHEMA
+[0m10:06:30.396359 [info ] [MainThread]:   authenticator: None
+[0m10:06:30.396671 [info ] [MainThread]:   oauth_client_id: None
+[0m10:06:30.396977 [info ] [MainThread]:   query_tag: None
+[0m10:06:30.397256 [info ] [MainThread]:   client_session_keep_alive: False
+[0m10:06:30.397526 [info ] [MainThread]:   host: None
+[0m10:06:30.397795 [info ] [MainThread]:   port: None
+[0m10:06:30.398061 [info ] [MainThread]:   proxy_host: None
+[0m10:06:30.398349 [info ] [MainThread]:   proxy_port: None
+[0m10:06:30.398615 [info ] [MainThread]:   protocol: None
+[0m10:06:30.398898 [info ] [MainThread]:   connect_retries: 1
+[0m10:06:30.399169 [info ] [MainThread]:   connect_timeout: None
+[0m10:06:30.399442 [info ] [MainThread]:   retry_on_database_errors: False
+[0m10:06:30.399718 [info ] [MainThread]:   retry_all: False
+[0m10:06:30.399994 [info ] [MainThread]:   insecure_mode: False
+[0m10:06:30.400310 [info ] [MainThread]:   reuse_connections: True
+[0m10:06:30.400898 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m10:06:30.401357 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m10:06:30.401824 [info ] [MainThread]: Registered adapter: snowflake=1.11.2
+[0m10:06:30.463490 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m10:06:30.481177 [debug] [MainThread]: Using snowflake connection "debug"
+[0m10:06:30.481496 [debug] [MainThread]: On debug: select 1 as id
+[0m10:06:30.481725 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:06:31.294075 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.812 seconds
+[0m10:06:31.295099 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:06:31.295515 [info ] [MainThread]: [31m1 check failed:[0m
+[0m10:06:31.295880 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/praveen/modern_retail_platform/dbt_project.yml> not found
+
+[0m10:06:31.296900 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.2227845, "process_in_blocks": "8", "process_kernel_time": 0.225587, "process_mem_max_rss": "138520", "process_out_blocks": "40", "process_user_time": 1.603108}
+[0m10:06:31.297399 [debug] [MainThread]: Command `dbt debug` failed at 10:06:31.297281 after 1.22 seconds
+[0m10:06:31.297786 [debug] [MainThread]: Connection 'debug' was left open.
+[0m10:06:31.298098 [debug] [MainThread]: On debug: Close
+[0m10:06:31.417491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d74881370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d7444e900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x776d71c4c890>]}
+[0m10:06:31.417989 [debug] [MainThread]: Flushing usage events
+[0m10:06:32.339368 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+
+    tables:
+      - name: ORDERS
+        config:
+          loaded_at_field: "O_ORDERDATE::timestamp"
+          freshness:
+            warn_after: {count: 1000, period: day}
+
+      - name: CUSTOMER
+      - name: LINEITEM
+      - name: PART
+      - name: SUPPLIER
