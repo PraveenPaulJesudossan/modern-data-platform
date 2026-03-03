@@ -35,7 +35,7 @@ jobs:
               prod:
                 type: snowflake
                 account: BCQSCMN-MS67180
-                user: PRAVEENPAULLXYZ
+                user: PRAVEENPAULXYZ
                 password: ${SNOWFLAKE_PASSWORD}
                 role: SYSADMIN
                 database: DBT_DB
