@@ -1,1 +1,29 @@
 .env
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+dbt_venv/
+airflow_venv/
+
+# dbt
+target/
+logs/
+dbt.log
+dbt_packages/
+
+# Airflow
+airflow/logs/
+airflow-webserver.pid
+airflow-scheduler.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
